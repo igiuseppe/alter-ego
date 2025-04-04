@@ -28,7 +28,7 @@ const Benefits = () => {
         <div className="flex flex-col lg:flex-row items-center">
           <div className="lg:w-1/2 mb-10 lg:mb-0">
             <div className="max-w-lg">
-              <h2 className="heading-lg mb-6">Why AlterEgo > Static Personas</h2>
+              <h2 className="heading-lg mb-6">Why AlterEgo &gt; Static Personas</h2>
               <p className="paragraph mb-8">
                 Traditional personas are static documents. AlterEgo creates dynamic, interactive user models that evolve and respond realistically.
               </p>
