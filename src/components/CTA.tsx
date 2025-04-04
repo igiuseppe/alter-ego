@@ -59,7 +59,7 @@ const CTA = () => {
   };
 
   return (
-    <section className="relative overflow-hidden py-12 md:py-16">
+    <section className="relative overflow-hidden py-8 md:py-10">
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-alterego-lavender/30 via-alterego-peach/20 to-alterego-mint/30"></div>
       </div>

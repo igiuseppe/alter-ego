@@ -16,10 +16,10 @@ const Demo = () => {
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-          {/* Demo 1: Transcript to Digital Twin */}
+          {/* Demo 1: Digital Twin */}
           <div className="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-100">
             <div className="bg-alterego-blue p-4">
-              <h3 className="font-semibold text-blue-900">Transcript to Digital Twin</h3>
+              <h3 className="font-semibold text-blue-900">Digital Twin</h3>
             </div>
             
             <div className="p-6">
@@ -31,13 +31,25 @@ const Demo = () => {
               </div>
               
               <div className="mb-6 bg-gray-50 rounded-lg p-4 border border-gray-200">
-                <div className="flex mb-2">
+                <div className="flex mb-3">
                   <span className="font-medium mr-2">Interviewer:</span>
-                  <p>What challenges do you face when using our dashboard?</p>
+                  <p>What challenges do you face when using our analytics dashboard?</p>
+                </div>
+                <div className="flex mb-3">
+                  <span className="font-medium mr-2">User:</span>
+                  <p>The export button is really hard to find. I spend too much time looking for it whenever I need to share reports.</p>
+                </div>
+                <div className="flex mb-3">
+                  <span className="font-medium mr-2">Interviewer:</span>
+                  <p>How does that affect your workflow?</p>
+                </div>
+                <div className="flex mb-3">
+                  <span className="font-medium mr-2">User:</span>
+                  <p>It's frustrating because I'm usually under tight deadlines. I need to quickly generate reports for stakeholders, and this slows me down significantly.</p>
                 </div>
                 <div className="flex">
-                  <span className="font-medium mr-2">User:</span>
-                  <p>I can never find the export button when I need it, and I waste time looking for it.</p>
+                  <span className="font-medium mr-2">Interviewer:</span>
+                  <p>What would an ideal solution look like to you?</p>
                 </div>
               </div>
               
@@ -62,10 +74,10 @@ const Demo = () => {
                 
                 <div className="border border-gray-200 p-4 rounded-b-lg">
                   <p className="text-sm mb-2">
-                    <span className="font-semibold">Digital memory:</span> Remembers past frustrations with UI navigation
+                    <span className="font-semibold">Digital memory:</span> Remembers past frustrations with UI navigation and export functionality
                   </p>
                   <p className="text-sm mb-2">
-                    <span className="font-semibold">Behavioral patterns:</span> Task-oriented, values efficiency, prefers visual cues
+                    <span className="font-semibold">Behavioral patterns:</span> Task-oriented, values efficiency, prefers visual cues, works under tight deadlines
                   </p>
                   <p className="text-sm mb-3">
                     <span className="font-semibold">Twin capability:</span> Can answer questions about preferences, react to new designs, simulate usage patterns
