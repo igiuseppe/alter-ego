@@ -69,14 +69,8 @@ const Demo = () => {
                 </div>
                 
                 <div className="border border-gray-200 p-4 rounded-b-lg">
-                  <p className="text-sm mb-2">
-                    <span className="font-semibold">Digital memory:</span> Remembers past frustrations with UI navigation and export functionality
-                  </p>
-                  <p className="text-sm mb-2">
-                    <span className="font-semibold">Behavioral patterns:</span> Task-oriented, values efficiency, prefers visual cues, works under tight deadlines
-                  </p>
                   <p className="text-sm mb-3">
-                    <span className="font-semibold">Twin capability:</span> Can answer questions about preferences, react to new designs, simulate usage patterns
+                    <span className="font-semibold">Digital Twin capability:</span> Can answer questions about preferences, react to new designs, simulate usage patterns
                   </p>
                   
                   <div className="mt-4 flex items-center">
