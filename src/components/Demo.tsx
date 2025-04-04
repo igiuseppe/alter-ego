@@ -1,11 +1,12 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { ChevronDown, Circle, Book, Settings, Search } from "lucide-react";
+import { ChevronDown, Circle, Book, Settings, Search, MessageCircle, User } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 
 const Demo = () => {
   return (
-    <section id="demo" className="bg-gray-50">
+    <section id="demo" className="bg-gray-50 py-20">
       <div className="container-custom">
         <div className="text-center mb-16">
           <h2 className="heading-lg mb-4">AlterEgo in Action</h2>
@@ -15,10 +16,10 @@ const Demo = () => {
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-          {/* Demo 1: Transcript to Twin */}
+          {/* Demo 1: Transcript to Digital Twin */}
           <div className="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-100">
             <div className="bg-alterego-blue p-4">
-              <h3 className="font-semibold text-blue-900">Transcript to Twin</h3>
+              <h3 className="font-semibold text-blue-900">Transcript to Digital Twin</h3>
             </div>
             
             <div className="p-6">
@@ -44,14 +45,14 @@ const Demo = () => {
                 <div className="w-8 h-8 rounded-full bg-alterego-lavender flex items-center justify-center mr-3">
                   <span className="text-primary-foreground font-bold text-sm">AE</span>
                 </div>
-                <p className="text-sm text-gray-500">AlterEgo creates a digital twin</p>
+                <p className="text-sm text-gray-500">AlterEgo creates a digital twin with memory and behaviors</p>
               </div>
               
               <div className="mb-6">
                 <div className="flex items-center justify-between bg-alterego-mint rounded-t-lg p-3">
                   <div className="flex items-center">
-                    <Book className="h-4 w-4 mr-2 text-green-700" />
-                    <span className="text-sm font-medium text-green-800">User Model: Alex T.</span>
+                    <User className="h-4 w-4 mr-2 text-green-700" />
+                    <span className="text-sm font-medium text-green-800">Digital Twin: Alex T.</span>
                   </div>
                   <div className="flex space-x-2">
                     <Settings className="h-4 w-4 text-green-700" />
@@ -61,14 +62,26 @@ const Demo = () => {
                 
                 <div className="border border-gray-200 p-4 rounded-b-lg">
                   <p className="text-sm mb-2">
-                    <span className="font-semibold">Identified pain points:</span> Navigation issues, feature discoverability
+                    <span className="font-semibold">Digital memory:</span> Remembers past frustrations with UI navigation
                   </p>
                   <p className="text-sm mb-2">
-                    <span className="font-semibold">Behavioral patterns:</span> Task-oriented, values efficiency
+                    <span className="font-semibold">Behavioral patterns:</span> Task-oriented, values efficiency, prefers visual cues
                   </p>
-                  <p className="text-sm">
-                    <span className="font-semibold">Digital twin ready for:</span> UI testing, feature feedback, preference assessment
+                  <p className="text-sm mb-3">
+                    <span className="font-semibold">Twin capability:</span> Can answer questions about preferences, react to new designs, simulate usage patterns
                   </p>
+                  
+                  <div className="mt-4 flex items-center">
+                    <input 
+                      type="text" 
+                      placeholder="Ask Alex about your product..." 
+                      className="border border-gray-200 rounded-l-lg py-2 px-3 flex-1 focus:outline-none focus:ring-1 focus:ring-blue-400"
+                    />
+                    <Button className="rounded-l-none bg-blue-500 hover:bg-blue-600">
+                      <MessageCircle className="h-4 w-4 mr-2" />
+                      Ask
+                    </Button>
+                  </div>
                 </div>
               </div>
               
@@ -127,13 +140,47 @@ const Demo = () => {
                 </div>
               </div>
               
-              <div className="grid grid-cols-3 gap-3 mb-6">
-                {[1, 2, 3, 4, 5, 6].map((item) => (
-                  <div key={item} className="p-3 border border-gray-200 rounded-lg">
-                    <div className="w-8 h-8 rounded-full bg-gray-200 mb-2"></div>
-                    <div className="h-2 w-16 bg-gray-200 rounded mb-1"></div>
-                    <div className="h-2 w-12 bg-gray-100 rounded"></div>
-                  </div>
+              <div className="grid grid-cols-2 gap-3 mb-6">
+                {[
+                  {
+                    name: "Mei L.",
+                    role: "Data Scientist",
+                    summary: "Power user who needs batch exports and time-saving features"
+                  },
+                  {
+                    name: "John D.",
+                    role: "Marketing Manager",
+                    summary: "Visual learner who prefers dashboard views"
+                  },
+                  {
+                    name: "Priya K.",
+                    role: "Product Owner",
+                    summary: "Needs collaborative features and sharing options"
+                  },
+                  {
+                    name: "Tom R.",
+                    role: "Engineering Lead",
+                    summary: "Technical user who wants API access and automation"
+                  }
+                ].map((user, index) => (
+                  <Card key={index} className="overflow-hidden border-gray-200">
+                    <CardContent className="p-4">
+                      <div className="flex items-center mb-2">
+                        <div className="w-8 h-8 rounded-full bg-alterego-lavender flex items-center justify-center mr-2">
+                          <span className="text-xs font-bold text-primary-foreground">{user.name.split(' ')[0][0]}{user.name.split(' ')[1][0]}</span>
+                        </div>
+                        <div>
+                          <p className="font-medium text-sm">{user.name}</p>
+                          <p className="text-xs text-gray-500">{user.role}</p>
+                        </div>
+                      </div>
+                      <p className="text-xs text-gray-600 mb-3 line-clamp-2">{user.summary}</p>
+                      <Button size="sm" variant="outline" className="w-full text-xs flex items-center justify-center">
+                        <MessageCircle className="h-3 w-3 mr-1" />
+                        Chat with user
+                      </Button>
+                    </CardContent>
+                  </Card>
                 ))}
               </div>
               
