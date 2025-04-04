@@ -24,7 +24,7 @@ const CTA = () => {
     
     try {
       // Replace this URL with your actual Google Sheets script URL
-      const sheetScriptURL = "https://script.google.com/macros/s/YOUR_GOOGLE_SHEET_SCRIPT_ID/exec";
+      const sheetScriptURL = "https://script.google.com/macros/s/AKfycbzEqPShVxOuQjt-uR1is2YEksoWSQGYdBra_BZyiKbbRL0YanYixkgxv4TusjNYMZ4r/exec";
       
       const response = await fetch(sheetScriptURL, {
         method: "POST",
