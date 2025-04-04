@@ -47,10 +47,6 @@ const Demo = () => {
                   <span className="font-medium mr-2">User:</span>
                   <p>It's frustrating because I'm usually under tight deadlines. I need to quickly generate reports for stakeholders, and this slows me down significantly.</p>
                 </div>
-                <div className="flex">
-                  <span className="font-medium mr-2">Interviewer:</span>
-                  <p>What would an ideal solution look like to you?</p>
-                </div>
               </div>
               
               <div className="flex items-center mb-6">
